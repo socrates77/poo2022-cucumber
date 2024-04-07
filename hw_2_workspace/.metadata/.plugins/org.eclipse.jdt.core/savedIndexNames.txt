@@ -1,0 +1,21 @@
+INDEX VERSION 1.131+/home/alessandro/poo2022/hw_2_workspace/.metadata/.plugins/org.eclipse.jdt.core
+3073051292.index
+327814745.index
+646036597.index
+1846802279.index
+646308851.index
+4252171922.index
+1584445454.index
+3537843396.index
+493977174.index
+1485373726.index
+1647356067.index
+3189905753.index
+583533195.index
+1117081151.index
+1865797976.index
+2103641859.index
+2728038506.index
+3704663293.index
+187621526.index
+1794487174.index

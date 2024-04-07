@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/alessandro/projects/hw_2_workspace/homework_2_2020"/>
+			<item value="/home/alessandro/projects/hw_2_workspace/Olimpiadi"/>
+			<item value="/home/alessandro/projects/hw_2_workspace/L"/>
+		</list>
+	</section>
+	<section name="CleanDialogSettings">
+		<item key="TOGGLE_SELECTED" value="true"/>
+		<item key="DIALOG_WIDTH" value="490"/>
+		<item key="DIALOG_HEIGHT" value="398"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/alessandro/projects/hw_2_workspace/homework_2_2020"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.m2e.core.wizards.Maven2ProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.m2e"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode path=&quot;/homework_2_2020/src/it/uniroma3/diadia/comandi/ComandoVai.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/homework_2_2020/src/it/uniroma3/diadia/ambienti/Stanza.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/homework_2_2020/src/it/uniroma3/diadia/comandi/ComandoPrendi.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/homework_2_2020/src/it/uniroma3/diadia/comandi/ComandoPosa.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/homework_2_2020/src/it/uniroma3/diadia/giocatore/Borsa.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;"/>
+		<item key="ShowDerived" value="false"/>
+		<item key="FilterByLocation" value="false"/>
+		<item key="WorkingSet" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_X_ORIGIN" value="629"/>
+			<item key="DIALOG_Y_ORIGIN" value="194"/>
+			<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+		</section>
+	</section>
+	<section name="org.eclipse.text.quicksearch.internal.ui.QuickSearchDialog.DIALOG_SETTINGS">
+		<item key="LAST_QUERY" value=""/>
+		<item key="PATH_FILTER" value=""/>
+		<item key="CASE_SENSITIVE" value="true"/>
+		<item key="KEEP_OPEN" value="false"/>
+		<list key="COLUMN_WIDTHS">
+			<item value="40"/>
+			<item value="400"/>
+			<item value="130"/>
+		</list>
+		<list key="SASH_WEIGHTS">
+			<item value="714"/>
+			<item value="285"/>
+		</list>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_X_ORIGIN" value="629"/>
+			<item key="DIALOG_Y_ORIGIN" value="194"/>
+			<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+		</section>
+	</section>
+</section>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;indiceAttrezzi&apos; in &apos;it.uniroma3.diadia.ambienti.Stanza&apos; to &apos;numeroAttrezzi&apos;&#x0A;- Original project: &apos;homework_2_2020&apos;&#x0A;- Original element: &apos;it.uniroma3.diadia.ambienti.Stanza.indiceAttrezzi&apos;&#x0A;- Renamed element: &apos;it.uniroma3.diadia.ambienti.Stanza.numeroAttrezzi&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;indiceAttrezzi&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;it.uniroma3.diadia.ambienti{Stanza.java[Stanza^indiceAttrezzi" name="numeroAttrezzi" references="true" setter="false" stamp="1628098245630" textual="false" version="1.0"/>
+</session>

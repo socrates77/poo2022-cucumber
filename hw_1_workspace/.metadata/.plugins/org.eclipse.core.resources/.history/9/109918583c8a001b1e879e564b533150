@@ -1,0 +1,79 @@
+package it.uniroma3.diadia;
+/**
+ * 
+ */
+
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+/**
+ * @author Alessandro Manias
+ *
+ */
+public class StanzaTest {
+	Stanza stanza;
+	Stanza stanzaAdiacente;
+
+	@Before
+	public void setUp() {
+		stanza = new Stanza("stanza");
+		stanzaAdiacente = new Stanza("stanzaAdiacente"); 
+	}
+
+	@Test
+	public void testImpostaStanzaAdiacenteNord() {
+		stanza.impostaStanzaAdiacente("nord", stanzaAdiacente);
+		assertEquals("stanza adiacente a nord", stanza.getStanzaAdiacente("nord").getNome(), stanzaAdiacente.getNome());
+	}
+	
+	@Test
+	public void testImpostaStanzaAdiacenteAlto() {
+		stanza.impostaStanzaAdiacente("alto", stanzaAdiacente);
+		assertEquals("stanza adiacente in alto", stanza.getStanzaAdiacente("alto").getNome(), stanzaAdiacente.getNome());
+	}
+
+	@Test //(expected = java.lang.NullPointerException.class)
+	public void testImpostaStanzaAdiacenteVuota() {
+		stanza.impostaStanzaAdiacente("", stanzaAdiacente);
+		stanza.getStanzaAdiacente("").getNome();
+		stanzaAdiacente.getNome();
+		assertEquals("stanza adiacente in alto", stanza.getStanzaAdiacente("").getNome(), stanzaAdiacente.getNome());
+	}
+
+	@Test(expected = java.lang.NullPointerException.class)
+	public void testImpostaStanzaAdiacenteTroppe() {
+		stanza.impostaStanzaAdiacente("nord", stanzaAdiacente);
+		stanza.impostaStanzaAdiacente("sud", stanzaAdiacente);
+		stanza.impostaStanzaAdiacente("ovest", stanzaAdiacente);
+		stanza.impostaStanzaAdiacente("est", stanzaAdiacente);
+		stanza.impostaStanzaAdiacente("alto", stanzaAdiacente);
+		stanza.impostaStanzaAdiacente("", stanzaAdiacente);
+		assertEquals("stanza adiacente in alto", stanza.getStanzaAdiacente("").getNome(), stanzaAdiacente.getNome());
+	}
+	
+	@Test
+	public void testGetStanzaAdiacenteNord() {
+		stanza.impostaStanzaAdiacente("nord", stanzaAdiacente);
+		assertEquals("stanza adiacente a nord", stanza.getStanzaAdiacente("nord").getNome(), stanzaAdiacente.getNome());
+	}
+	
+	@Test
+	public void testGetStanzaAdiacenteAlto() {
+		stanza.impostaStanzaAdiacente("nord", stanzaAdiacente);
+		stanza.impostaStanzaAdiacente("sud", stanzaAdiacente);
+		stanza.impostaStanzaAdiacente("alto", stanzaAdiacente);
+		assertEquals("stanza adiacente in alto", stanza.getStanzaAdiacente("alto").getNome(), stanzaAdiacente.getNome());
+	}
+
+	@Test //(expected = java.lang.NullPointerException.class)
+	public void testImpostaGetAdiacenteVuota() {
+		stanza.impostaStanzaAdiacente("nord", stanzaAdiacente);
+		stanza.impostaStanzaAdiacente("sud", stanzaAdiacente);
+		stanza.impostaStanzaAdiacente("alto", stanzaAdiacente);
+		stanza.impostaStanzaAdiacente("", stanzaAdiacente);
+		assertEquals("stanza adiacente in alto", stanza.getStanzaAdiacente("").getNome(), stanzaAdiacente.getNome());
+	}
+}

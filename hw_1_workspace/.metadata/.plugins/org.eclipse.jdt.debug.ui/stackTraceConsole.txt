@@ -1,0 +1,8 @@
+Definire due oggetti Stanza: bar e mensa
+– Impostare le uscite dei due oggetti affinché:
+• L'uscita nord del bar porti nella mensa
+• L'uscita sud della mensa porti nel bar
+– Stampare la descrizione della stanza dietro la
+porta nord del bar
+– Stampare la descrizione della stanza dietro la
+porta sud della mensa

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;hw_2/src/test/resources/diadia/hw_2/messaggio_di_benvenuto.feature&apos; to &apos;primi_semplici_test.feature&apos;" description="Rename resource &apos;messaggio_di_benvenuto.feature&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/test/resources/diadia/hw_2/messaggio_di_benvenuto.feature" name="primi_semplici_test.feature" stamp="1625434755575" updateReferences="true"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;name&apos; in &apos;it.uniroma3.diadia.ambienti.StanzaMagicaTest.testComportamentoMagicoRaddoppioPeso()&apos; to &apos;nome&apos;&#x0A;- Original project: &apos;homework_2_2020&apos;&#x0A;- Original element: &apos;it.uniroma3.diadia.ambienti.StanzaMagicaTest.testComportamentoMagicoRaddoppioPeso().name&apos;&#x0A;- Renamed element: &apos;name&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;name&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/test&lt;it.uniroma3.diadia.ambienti{StanzaMagicaTest.java[StanzaMagicaTest~testComportamentoMagicoRaddoppioPeso@name!1000!1031!1007!1010!QString;!0!false" name="nome" references="true" stamp="1626539314842" version="1.0"/>
+</session>

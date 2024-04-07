@@ -1,0 +1,73 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import it.uniroma3.diadia.attrezzi.Attrezzo;
+import it.uniroma3.diadia.giocatore.Giocatore;
+
+/**
+ * Classe GiocatoreTest - Test per la classe Giocatore
+ * 
+ * @author Alessandro Manias
+ *
+ */
+public class GiocatoreTest {
+
+	private Giocatore giocatore;
+	
+	@Before
+	public void setUp() {
+		this.giocatore = new Giocatore(20);
+	}
+	
+	@Test
+	public void testImpostaCfu() {
+		this.giocatore.setCfu(10);
+		assertEquals(10, this.giocatore.getCfu());
+	}
+	
+	@Test 
+	public void testAggiungiAttrezzo() {
+		assertTrue(this.giocatore.addAttrezzo(new Attrezzo("Clava", 1)));
+	}
+	
+	@Test 
+	public void testRimuoviAttrezzo() {
+		this.giocatore.addAttrezzo(new Attrezzo("Clava", 1));
+		assertEquals("Clava", this.giocatore.removeAttrezzo("Clava").getNome());
+	}
+	
+	@Test 
+	public void testRimuoviAttrezzoNonPosseduto() {
+		this.giocatore.addAttrezzo(new Attrezzo("Clava", 1));
+		assertNull(this.giocatore.removeAttrezzo("Spadone Authenticato"));
+	}
+
+	@Test
+	public void testRimuoviAttrezzoDaGiocatoreSenzaAttrezzi() {
+		assertNull(this.giocatore.removeAttrezzo("Spadone Authenticato"));
+	}
+	
+	@Test
+	public void testIlGiocatoreHaAttrezzo() {
+		this.giocatore.addAttrezzo(new Attrezzo("Clava", 1));
+		assertTrue(this.giocatore.hasAttrezzo("Clava"));
+	}
+
+	@Test
+	public void testIlGiocatoreNonHaAttrezzo() {
+		this.giocatore.addAttrezzo(new Attrezzo("Clava", 1));
+		assertFalse(this.giocatore.hasAttrezzo("Spadone"));
+	}
+
+	@Test
+	public void testPrendiDallaBorsaVuota() {
+		assertNull(this.giocatore.getAttrezzo("Clava"));
+	}
+}

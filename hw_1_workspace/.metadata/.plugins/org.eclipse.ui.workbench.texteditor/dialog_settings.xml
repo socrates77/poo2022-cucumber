@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="&#x0A;public class Punto {&#x0A;&#x09;public class Punto {&#x0A;&#x09;&#x09;private int x;&#x0A;&#x09;&#x09;private int y;&#x0A;&#x0A;&#x09;&#x09;public void setX(int posX) {&#x0A;&#x09;&#x09;x = posX;&#x0A;&#x09;&#x09;}&#x0A;&#x09;&#x09;public void setY(int posY) {&#x0A;&#x09;&#x09;y = posY;&#x0A;&#x09;&#x09;}&#x0A;&#x09;&#x09;public int getX() {&#x0A;&#x09;&#x09;return x;&#x0A;&#x09;&#x09;}&#x0A;&#x09;&#x09;public int getY() {&#x0A;&#x09;&#x09;return y;&#x0A;&#x09;&#x09;}&#x0A;&#x0A;&#x09;&#x09;}&#x0A;}&#x0A;"/>
+		<list key="findhistory">
+			<item value="&#x0A;public class Punto {&#x0A;&#x09;public class Punto {&#x0A;&#x09;&#x09;private int x;&#x0A;&#x09;&#x09;private int y;&#x0A;&#x0A;&#x09;&#x09;public void setX(int posX) {&#x0A;&#x09;&#x09;x = posX;&#x0A;&#x09;&#x09;}&#x0A;&#x09;&#x09;public void setY(int posY) {&#x0A;&#x09;&#x09;y = posY;&#x0A;&#x09;&#x09;}&#x0A;&#x09;&#x09;public int getX() {&#x0A;&#x09;&#x09;return x;&#x0A;&#x09;&#x09;}&#x0A;&#x09;&#x09;public int getY() {&#x0A;&#x09;&#x09;return y;&#x0A;&#x09;&#x09;}&#x0A;&#x0A;&#x09;&#x09;}&#x0A;}&#x0A;"/>
+		</list>
+	</section>
+</section>

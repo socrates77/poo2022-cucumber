@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.debug.ui.STRING_VARIABLE_SELECTION_DIALOG_SECTION">
+		<item key="DIALOG_X_ORIGIN" value="94"/>
+		<item key="DIALOG_Y_ORIGIN" value="-153"/>
+		<item key="DIALOG_WIDTH" value="388"/>
+		<item key="DIALOG_HEIGHT" value="661"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="org.eclipse.debug.ui.SCOPED_SAVE_SELECTION_DIALOG">
+		<item key="DIALOG_WIDTH" value="692"/>
+		<item key="DIALOG_HEIGHT" value="398"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="org.eclipse.debug.ui.LAUNCH_CONFIGURATIONS_DIALOG_SECTION">
+		<item key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_1" value="237"/>
+		<item key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_2" value="762"/>
+		<item key="org.eclipse.debug.ui.EXPANDED_NODES" value=", org.eclipse.m2e.Maven2LaunchConfigurationType, "/>
+		<item key="DIALOG_WIDTH" value="1118"/>
+		<item key="DIALOG_HEIGHT" value="1080"/>
+		<item key="DIALOG_FONT_NAME" value="1|Cantarell|11.0|0|GTK|1|"/>
+	</section>
+	<section name="SHOW_COMMAND_LINE_DIALOG">
+		<item key="DIALOG_X_ORIGIN" value="214"/>
+		<item key="DIALOG_Y_ORIGIN" value="214"/>
+		<item key="DIALOG_WIDTH" value="570"/>
+		<item key="DIALOG_HEIGHT" value="460"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="org.eclipse.debug.ui.SINGLE_LAUNCH_CONFIGURATION_DIALOG_SECTION">
+		<item key="DIALOG_WIDTH" value="759"/>
+		<item key="DIALOG_HEIGHT" value="647"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="org.eclipse.debug.ui.SELECT_LAUNCH_SHORTCUT_DIALOG">
+		<item key="DIALOG_WIDTH" value="277"/>
+		<item key="DIALOG_HEIGHT" value="439"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+</section>

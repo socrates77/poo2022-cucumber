@@ -1,0 +1,58 @@
+
+public class Stanza {
+
+	private String nome;
+	private Stanza stanzaAdiacente;
+	private Attrezzo[] attrezzi;
+	private int numeroAttrezzi;
+	
+	public Stanza(String nome) {
+		this.nome = nome;
+		this.attrezzi = new Attrezzo[10];
+		this.numeroAttrezzi = 0;
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	/**
+	 * 
+	 * @param stanzaAdiacente
+	 */
+	public void setStanzaAdiacente(Stanza stanzaAdiacente) {
+		this.stanzaAdiacente = stanzaAdiacente;
+	}
+	/**
+	 * 
+	 * @param attrezzo
+	 * @return
+	 */
+	public boolean addAttrezzo(Attrezzo attrezzo) {
+		boolean added = false;
+		if ( this.numeroAttrezzi < 10 ) {
+			this.attrezzi[this.numeroAttrezzi] = attrezzo;
+		}
+		return added;
+	}
+	/**
+	 * 
+	 * @return
+	 */
+	public String getNome() {
+		return nome;
+	}
+	/**
+	 * 
+	 * @return
+	 */
+	public Stanza getStanzaAdiacente() {
+		return stanzaAdiacente;
+	}
+	/**
+	 * 
+	 * @return attrezzoContenuto
+	 */
+	public Attrezzo getAttrezzo() {
+		return attrezzoContenuto;
+	}
+}

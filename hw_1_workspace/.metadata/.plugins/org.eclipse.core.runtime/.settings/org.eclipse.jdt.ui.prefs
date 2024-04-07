@@ -1,0 +1,11 @@
+Refactoring.savealleditors=true
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="Attrezzo"><rhs name\="Attrezzo"/></lhs><lhs name\="it.uniroma2.presone.Persone"><rhs name\="it.uniroma2.presone.Persone"/></lhs><lhs name\="Stanza"><rhs name\="Stanza"/></lhs><lhs name\="it.uniroma3.diadia.Partita"><rhs name\="it.uniroma3.diadia.Partita"/></lhs><lhs name\="it.uniroma3.diadia.Stanza"><rhs name\="it.uniroma3.diadia.Stanza"/></lhs><lhs name\="it.uniroma3.diadia.Attrezzo"><rhs name\="it.uniroma3.diadia.Attrezzo"/></lhs><lhs name\="it.uniroma3.diadia.Labirinto"><rhs name\="it.uniroma3.diadia.Labirinto"/></lhs><lhs name\="it.uniroma3.diadia.Giocatore"><rhs name\="it.uniroma3.diadia.Giocatore"/></lhs><lhs name\="it.uniroma3.diadia.IOConsole"><rhs name\="it.uniroma3.diadia.IOConsole"/></lhs><lhs name\="java.lang.CharSequence"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.lang.AbstractStringBuilder"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.lang.Appendable"><rhs name\="java.lang.StringBuilder"/></lhs></history>
+content_assist_number_of_computers=12
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=22
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true
