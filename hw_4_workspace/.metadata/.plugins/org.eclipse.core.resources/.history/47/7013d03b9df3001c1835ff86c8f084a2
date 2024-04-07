@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.ambienti;
+
+/**
+ * @author alessandro
+ *
+ */
+public enum Direzione {
+
+}

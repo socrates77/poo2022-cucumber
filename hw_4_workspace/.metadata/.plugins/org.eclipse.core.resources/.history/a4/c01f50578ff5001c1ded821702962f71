@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.comandi;
+
+import it.uniroma3.diadia.IO;
+
+/**
+ * @author Alessandro Manias
+ *
+ */
+public class FabricaDiComandiRiflessiva implements FabricaDiComandi {
+
+	@Override
+	public Comando costruisciComando(String istruzione, IO ioConsole) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

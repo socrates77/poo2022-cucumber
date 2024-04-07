@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.comandi;
+
+import it.uniroma3.diadia.Partita;
+
+/**
+ * @author Alessandro Manias
+ *
+ */
+public class ComandoNonValido extends AbstractComando {
+
+	public ComandoNonValido() {
+		this.setNome("comando non valido");
+	}
+
+	@Override
+	public void esegui(Partita partita) {
+		this.ioConsole.mostraMessaggio("Comando sconosciuto");
+	}
+	
+}

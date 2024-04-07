@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.personaggi;
+
+import it.uniroma3.diadia.Partita;
+
+/**
+ * @author alessandro
+ *
+ */
+public class Mago extends AbstractPersonaggio {
+
+	@Override
+	public String agisci(Partita partita) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,19 @@
+package it.uniroma3.comandi;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import it.uniroma3.diadia.comandi.Comando;
+import it.uniroma3.diadia.comandi.ComandoGuarda;
+
+public class ComandoGuardaTest {
+
+	@Test
+	public void testGetNome() {
+		Comando ca = new ComandoGuarda();
+		
+		assertTrue("guarda", cs.getNome());
+	}
+
+}

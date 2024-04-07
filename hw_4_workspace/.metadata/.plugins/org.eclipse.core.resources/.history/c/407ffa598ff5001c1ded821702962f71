@@ -1,0 +1,31 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.comandi;
+
+import java.util.Scanner;
+
+import it.uniroma3.diadia.IO;
+
+/**
+ * @author Alessandro Manias
+ *
+ */
+public class FabricaDiComandiRiflessiva implements FabricaDiComandi {
+
+	@Override
+	public Comando costruisciComando(String istruzione, IO ioConsole) {
+
+		Scanner scannerDiParole = new Scanner(istruzione);
+		String nomeComando = null;
+		String parametro = null;
+		Comando comando = null;
+		
+		if (scannerDiParole.hasNext())
+			nomeComando = scannerDiParole.next(); // prima parola: nome del comando
+		
+		if (scannerDiParole.hasNext())
+			parametro = scannerDiParole.next(); // seconda parola: eventuale parametro
+	}
+
+}

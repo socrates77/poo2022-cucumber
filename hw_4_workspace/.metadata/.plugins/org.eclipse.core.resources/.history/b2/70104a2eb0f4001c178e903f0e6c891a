@@ -1,0 +1,29 @@
+package it.uniroma3.diadia.comandi;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.junit.Before;
+
+import it.uniroma3.diadia.Partita;
+
+public class ComandoSalutaTest {
+
+	private Partita partita;
+	
+	@Before
+	private void setUp() {
+		
+	}
+	
+	@Test
+	public void testEsegui() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetMessaggio() {
+		fail("Not yet implemented");
+	}
+
+}

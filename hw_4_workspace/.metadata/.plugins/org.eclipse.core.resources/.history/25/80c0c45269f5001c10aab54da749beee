@@ -1,0 +1,73 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.personaggi;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import it.uniroma3.diadia.IOTester;
+import it.uniroma3.diadia.Partita;
+import it.uniroma3.diadia.ambienti.Direzione;
+import it.uniroma3.diadia.ambienti.Labirinto;
+import it.uniroma3.diadia.ambienti.Stanza;
+import it.uniroma3.diadia.attrezzi.Attrezzo;
+
+import static it.uniroma3.diadia.ambienti.Direzione.*;
+/**
+ * @author alessandro
+ *
+ */
+public class StregaTest {
+
+	private Partita partita;
+	private Labirinto labirinto;
+	private IOTester ioConsole;
+	private AbstractPersonaggio personaggio;
+	
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@Before
+	public void setUp() throws Exception {
+		this.personaggio = new Strega("Strega", "Strega Bacheca");
+		Stanza stanzaMain = new Stanza("Main");
+		Stanza stanzaConUnAttrezzo = new Stanza("Stanza con un attrezzo");
+		stanzaConUnAttrezzo.addAttrezzo(new Attrezzo("Attrezzo 1", 1));
+		Stanza stanzaConDueAttrezzi = new Stanza("Stanza con due attrezzi");
+		stanzaConDueAttrezzi.addAttrezzo(new Attrezzo("Attrezzo 2", 1));
+		stanzaConDueAttrezzi.addAttrezzo(new Attrezzo("Attrezzo 3", 1));
+		stanzaMain.impostaStanzaAdiacente(NORD, stanzaConDueAttrezzi);
+		stanzaMain.impostaStanzaAdiacente(SUD, stanzaConUnAttrezzo);
+		this.labirinto = new Labirinto();
+		this.labirinto.setStanzaCorrente(stanzaMain);
+		this.partita = new Partita(this.labirinto);
+		this.ioConsole = new IOTester();
+	}
+
+	/**
+	 * Test method for {@link it.uniroma3.diadia.personaggi.Strega#agisci(it.uniroma3.diadia.Partita)}.
+	 */
+	@Test
+	public void testAgisciPrimaDelSaluto() {
+		Attrezzo[] attrezzi = { new Attrezzo("Attrezzo 1", 1) };
+		this.personaggio.agisci(partita);
+		assertEquals(new Stanza("Stanza con un attrezzo"), this.partita.getStanzaCorrente());
+		assertArrayEquals(attrezzi, this.partita.getStanzaCorrente().getAttrezzi());
+	}
+	
+	/**
+	 * Test method for {@link it.uniroma3.diadia.personaggi.Strega#agisci(it.uniroma3.diadia.Partita)}.
+	 */
+	@Test
+	public void testAgisciDopoIlSaluto() {
+		Attrezzo[] attrezzi = { new Attrezzo("Attrezzo 2", 1), new Attrezzo("Attrezzo 3", 1) };
+		this.personaggio.saluta();
+		this.personaggio.agisci(partita);
+		assertEquals(new Stanza("Stanza con due attrezzi"), this.partita.getStanzaCorrente());
+		assertArrayEquals(attrezzi, this.partita.getStanzaCorrente().getAttrezzi());
+	}
+
+}

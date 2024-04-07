@@ -1,0 +1,39 @@
+/**
+ * Rappreseta le Direzioni utilizzabili nel gioco.
+ */
+package it.uniroma3.diadia.ambienti;
+
+/**
+ * 
+ * @author Alessandro Manias
+ *
+ */
+public enum Direzione {
+	NORD(0),
+	OVEST(1),
+	SUD(2),
+	EST(3);
+	
+	public Direzione opposta(Direzione d) {
+		Direzione opposta;
+
+		switch(d) {
+			case NORD:
+				opposta = SUD;
+				break;
+			case OVEST:
+				opposta = EST;
+				break;
+			case SUD:
+				opposta = NORD;
+				break;
+			case EST:
+				opposta = OVEST;
+				break;
+			default:
+				throw new IllegalArgumentException();
+		}
+		
+		return opposta;
+	}
+}

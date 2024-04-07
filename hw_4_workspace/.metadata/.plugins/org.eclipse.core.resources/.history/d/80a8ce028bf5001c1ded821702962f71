@@ -1,0 +1,37 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.comandi;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+/**
+ * @author alessandro
+ *
+ */
+public class FabricaDiComandiRiflessivaTest {
+
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	/**
+	 * Test method for {@link it.uniroma3.diadia.comandi.FabricaDiComandiRiflessiva#costruisciComando(java.lang.String, it.uniroma3.diadia.IO)}.
+	 */
+	@Test
+	public void testCostruisciComando() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testClassReflecion() {
+		Class<Comando> cl = Comando.class;
+		System.out.println(cl.getPackage());
+	}
+}

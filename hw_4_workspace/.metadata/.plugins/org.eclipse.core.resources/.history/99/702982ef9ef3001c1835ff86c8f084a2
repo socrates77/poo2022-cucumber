@@ -1,0 +1,16 @@
+/**
+ * Rappreseta le Direzioni utilizzabili nel gioco.
+ */
+package it.uniroma3.diadia.ambienti;
+
+/**
+ * 
+ * @author Alessandro Manias
+ *
+ */
+public enum Direzione {
+	NORD() {},
+	OVEST() {},
+	SUD(){},
+	EST() {}
+}

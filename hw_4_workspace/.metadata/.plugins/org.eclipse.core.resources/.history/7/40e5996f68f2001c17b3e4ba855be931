@@ -1,0 +1,123 @@
+package it.uniroma3.comandi;
+
+import static org.junit.Assert.*;
+	
+import org.junit.Before;
+import org.junit.Test;
+
+import it.uniroma3.diadia.IOTester;
+import it.uniroma3.diadia.Partita;
+import it.uniroma3.diadia.comandi.Comando;
+import it.uniroma3.diadia.comandi.AbstractComando;
+
+public class AbstractComandoTest {
+
+	private Partita partita;
+	private IOTester ioConsole;
+
+	@Before
+	public void setUp() {
+		this.partita = new Partita();
+		this.ioConsole = new IOTester();
+	}
+	
+	@Test
+	public void testHashCodeComandoVuoto() {
+		class ComandoTest extends AbstractComando {
+			@Override
+			public void esegui(Partita partita) {
+				
+			}
+		}
+		Comando a = new ComandoTest();
+		Comando b = new ComandoTest();
+		
+		assertEquals(a.hashCode(), b.hashCode());
+	}
+
+	@Test
+	public void testHashCodeComandoConNome() {
+		class ComandoTest extends AbstractComando {
+			
+			public ComandoTest() {
+				super.nome = "comandotest";
+			}
+			
+			@Override
+			public void esegui(Partita partita) {
+				
+			}
+		}
+		Comando a = new ComandoTest();
+		Comando b = new ComandoTest();
+		
+		assertNotNull(a.getNome());
+		assertNotNull(b.getNome());
+		assertEquals(a.hashCode(), b.hashCode());
+	}
+	
+	@Test
+	public void testEqualsRiflessivo() {
+		class ComandoTest extends AbstractComando {
+			
+			public ComandoTest() {
+				super.nome = "comandotest";
+			}
+			@Override
+			public void esegui(Partita partita) {
+				
+			}
+		}
+		Comando a = new ComandoTest();
+		
+		assertTrue(a.equals(a));
+	}
+
+	@Test
+	public void testEqualsSimmetrico() {
+
+		class ComandoTest extends AbstractComando {
+			
+			public ComandoTest() {
+				super.nome = "comandotest";
+			}
+			@Override
+			public void esegui(Partita partita) {
+				
+			}
+		}
+		Comando a = new ComandoTest();
+		Comando b = new ComandoTest();
+		
+		assertTrue(a.equals(a));
+	}
+	
+	@Test
+	public void testSetParametro() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetIO() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetNome() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetParametro() {
+		Comando ca = new AbstractComando() {
+			@Override
+			public void esegui(Partita partita) {
+			}
+		};
+		ca.setParametro("parametro");
+		ca.setIO(this.ioConsole);
+		ca.esegui(this.partita);
+		assertEquals("parametro", ca.getParametro());
+	}
+
+}

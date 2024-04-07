@@ -1,0 +1,61 @@
+package it.uniroma3.diadia.comandi;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.junit.Before;
+
+import it.uniroma3.diadia.IO;
+import it.uniroma3.diadia.IOTester;
+import it.uniroma3.diadia.Partita;
+import it.uniroma3.diadia.ambienti.Labirinto;
+import it.uniroma3.diadia.ambienti.Stanza;
+import it.uniroma3.diadia.personaggi.AbstractPersonaggio;
+
+public class ComandoSalutaTest {
+	class Personaggio extends AbstractPersonaggio {
+		public Personaggio() {
+			super("Personaggio", "Presentazione");
+		}
+		
+		@Override
+		public String agisci(Partita partita) {
+			return "";
+		}
+	}
+	
+	private Partita partita;
+	private IOTester ioConsole;
+	private Labirinto labirinto;
+	
+	@Before
+	public void setUp() {
+		this.labirinto = new Labirinto();
+		this.partita = new Partita();
+		this.partita.setLabirinto(labirinto);
+		this.ioConsole = new IOTester();
+	}
+	
+	@Test
+	public void testEsegui() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetMessaggioStanzaSenzaPersonaggio() {
+		Stanza stanza = new Stanza("Stanza senza personaggio");
+		ComandoSaluta co = new ComandoSaluta();
+		co.setIO(this.ioConsole);
+		this.labirinto.setStanzaCorrente(stanza);
+		co.esegui(this.partita);
+		assertEquals(co.MESSAGGIO_CON_CHI, this.ioConsole.getUltimoMessaggio());
+		
+	}
+	
+	@Test
+	public void testGetMessaggioStanzaConPersonaggio() {
+		Stanza stanza = new Stanza("Stanza con personaggio");
+		assertNull(null);
+	}
+
+}

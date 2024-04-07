@@ -1,0 +1,55 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.ambienti;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+/**
+ * @author alessandro
+ *
+ */
+public class DirezioneTest {
+
+	@Test
+	public void testEquals() {
+		assertEquals(Direzione.NORD, Direzione.NORD);
+	}
+
+	@Test
+	public void testHashCode() {
+		assertEquals(Direzione.NORD.hashCode(), Direzione.NORD.hashCode());
+	}
+	
+	@Test
+	public void testValues() {
+		Direzione[] dirs = { Direzione.NORD, Direzione.OVEST, Direzione.SUD, Direzione.EST };
+		assertArrayEquals(dirs, Direzione.values());
+	}
+	
+	@Test
+	public void testOrdinal() {
+		assertEquals(0, Direzione.NORD.ordinal());
+		assertEquals(1, Direzione.OVEST.ordinal());
+		assertEquals(2, Direzione.SUD.ordinal());
+		assertEquals(3, Direzione.EST.ordinal());
+	}
+	
+	@Test
+	public void testValueOf() {
+		assertEquals(Direzione.NORD, Direzione.valueOf("NORD"));
+		assertEquals(Direzione.OVEST, Direzione.valueOf("OVEST"));
+		assertEquals(Direzione.SUD, Direzione.valueOf("SUD"));
+		assertEquals(Direzione.EST, Direzione.valueOf("EST"));
+	}
+	
+	@Test
+	public void testName() {
+		assertEquals("NORD", Direzione.NORD.name());
+		assertEquals("OVEST", Direzione.OVEST.name());
+		assertEquals("SUD", Direzione.SUD.name());
+		assertEquals("EST", Direzione.EST.name());
+	}
+}

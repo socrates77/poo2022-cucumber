@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.personaggi;
+
+/**
+ * @author alessandro
+ *
+ */
+public abstract class AbstractPersonaggio {
+
+}

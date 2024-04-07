@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.comandi;
+
+import it.uniroma3.diadia.Partita;
+
+/**
+ * @author Alessandro Manias
+ *
+ */
+public class ComandoFine extends AbstractComando {
+	/**
+	 * 
+	 */
+	public ComandoFine() {
+		this.setNome("fine");
+	}
+
+	@Override
+	public void esegui(Partita partita) {
+		this.ioConsole.mostraMessaggio("Grazie di aver giocato!");  // si desidera smettere
+		partita.setFinita();
+	}
+}

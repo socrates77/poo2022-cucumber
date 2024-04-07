@@ -1,0 +1,36 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.personaggi;
+
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.TreeSet;
+
+import it.uniroma3.diadia.Partita;
+import it.uniroma3.diadia.ambienti.Stanza;
+
+/**
+ * @author Alessandro Manias
+ *
+ */
+public class Strega extends AbstractPersonaggio {
+	class StanzaComparator implements Comparator<Stanza> {
+		public int compare(Stanza o1, Stanza o2) {
+			return o1.getAttrezzi().length - o2.getAttrezzi().length; 
+		}
+	}
+	
+	public Strega(String nome, String presentazione) {
+		super(nome, presentazione);
+	}
+
+	@Override
+	public String agisci(Partita partita) {
+		Stanza stanzaCorrente = partita.getStanzaCorrente();
+		Collection<Stanza> stanze = new TreeSet<Stanza>(new StanzaComparator());
+		
+		return "";
+	}
+
+}

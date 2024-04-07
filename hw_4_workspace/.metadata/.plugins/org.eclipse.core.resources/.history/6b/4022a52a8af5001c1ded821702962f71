@@ -1,0 +1,100 @@
+package it.uniroma3.diadia.comandi;
+
+import static org.junit.Assert.*;
+
+import java.util.Scanner;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import it.uniroma3.diadia.IO;
+import it.uniroma3.diadia.IOConsole;
+
+public class FabbricaDiComandiFisarmonicaTest {
+
+	private FabbricaDiComandi fabbricaDiComandi;
+	private IO ioConsole;
+	
+	@Before
+	public void setUp() {
+		this.fabbricaDiComandi = new FabbricaDiComandiFisarmonica();
+		this.ioConsole = new IOConsole(new Scanner(System.in));
+	}
+
+	@Test
+	public void testCostrisciComandoDaStringaVuota() {
+		Comando c = fabbricaDiComandi.costruisciComando("", this.ioConsole);
+		Comando c1 = new ComandoNonValido();;
+		assertEquals(c1.getClass(), c.getClass());
+	}
+
+	@Test
+	public void testCostrisciComandoInestistente() {
+		Comando c = fabbricaDiComandi.costruisciComando("clona", this.ioConsole);
+		Comando c1 = new ComandoNonValido();
+		assertEquals(c1.getClass(), c.getClass());
+	}
+
+	@Test
+	public void testCostruisciComandoAiuto() {
+		Comando c = fabbricaDiComandi.costruisciComando("aiuto", this.ioConsole);
+		Comando c1 = new ComandoAiuto();
+		assertEquals(c1.getClass(), c.getClass());
+	}
+
+	@Test
+	public void testCostruisciComandoFine() {
+		Comando c = fabbricaDiComandi.costruisciComando("fine", this.ioConsole);
+		Comando c1 = new ComandoFine();
+		assertEquals(c1.getClass(), c.getClass());
+	}
+	
+	@Test
+	public void testCostruisciComandoGuarda() {
+		Comando c = fabbricaDiComandi.costruisciComando("guarda", this.ioConsole);
+		Comando c1 = new ComandoGuarda();
+		assertEquals(c1.getClass(), c.getClass());
+	}
+
+	@Test
+	public void testCostruisciComandoNonValido() {
+		Comando c = fabbricaDiComandi.costruisciComando("comando nonvalido", this.ioConsole);
+		Comando c1 = new ComandoNonValido();
+		assertEquals(c1.getClass(), c.getClass());
+	}
+
+	@Test
+	public void testCostruisciComandoPosa() {
+		Comando c = fabbricaDiComandi.costruisciComando("posa osso", this.ioConsole);
+		Comando c1 = new ComandoPosa();
+		assertEquals(c1.getClass(), c.getClass());
+	}
+
+	@Test
+	public void testCostruisciComandoPrendi() {
+		Comando c = fabbricaDiComandi.costruisciComando("prendi osso", this.ioConsole);
+		Comando c1 = new ComandoPrendi();
+		assertEquals(c1.getClass(), c.getClass());
+	}
+
+	@Test
+	public void testCostrisciComandoVai() {
+		Comando c = fabbricaDiComandi.costruisciComando("vai nord", this.ioConsole);
+		Comando c1 = new ComandoVai();
+		assertEquals(c1.getClass(), c.getClass());
+	}
+
+	@Test
+	public void testCostrisciComandoSaluta() {
+		Comando c = fabbricaDiComandi.costruisciComando("saluta", this.ioConsole);
+		Comando c1 = new ComandoSaluta();
+		assertEquals(c1.getClass(), c.getClass());
+	}
+
+	@Test
+	public void testCostrisciComandoInteragisci() {
+		Comando c = fabbricaDiComandi.costruisciComando("interagisci", this.ioConsole);
+		Comando c1 = new ComandoInteragisci();
+		assertEquals(c1.getClass(), c.getClass());
+	}	
+}

@@ -1,0 +1,24 @@
+package it.uniroma3.diadia.personaggi;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import it.uniroma3.diadia.Partita;
+
+public class AbstractPersonaggioTest {
+	class Personaggio extends AbstractPersonaggio {
+		@Override
+		public String agisci(Partita partita) {
+			
+		}
+	}
+
+	AbstractPersonaggio personaggio = 
+	
+	@Test
+	public void testSaluta() {
+		fail("Not yet implemented");
+	}
+
+}

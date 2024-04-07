@@ -1,0 +1,65 @@
+package it.uniroma3.diadia.comandi;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Before;
+
+import it.uniroma3.diadia.IOTester;
+import it.uniroma3.diadia.Partita;
+import it.uniroma3.diadia.ambienti.Labirinto;
+import it.uniroma3.diadia.ambienti.Stanza;
+import static it.uniroma3.diadia.ambienti.Direzione.*;
+
+/**
+ * 
+ * @author Alessandro Manias
+ *
+ */
+public class ComandoVaiTest {
+
+	private Partita partita;
+	private IOTester ioConsole;
+
+	@Before
+	public void setUp() {
+		Stanza atrio = new Stanza("Atrio");
+		Stanza biblioteca = new Stanza("Biblioteca");
+		atrio.impostaStanzaAdiacente(NORD, biblioteca);
+		biblioteca.impostaStanzaAdiacente(SUD, atrio);
+		Labirinto labirinto = new Labirinto();
+		labirinto.setStanzaCorrente(atrio);
+		labirinto.setStanzaVincente(biblioteca);
+		this.partita = new Partita();
+		this.partita.setLabirinto(labirinto);
+		this.ioConsole = new IOTester();
+	}
+
+
+	@Test
+	public void testEseguiSenzaDirezione() {
+		Comando comando = new ComandoVai();
+		comando.setIO(this.ioConsole);
+		comando.esegui(this.partita);
+		assertEquals("Dove vuoi andare?", this.ioConsole.getUltimoMessaggio());
+	}
+
+	@Test
+	public void testEseguiDirezioneInesistente() {
+		Comando comando = new ComandoVai();
+		comando.setParametro("sud");
+		comando.setIO(this.ioConsole);
+		comando.esegui(this.partita);
+		assertEquals("Direzione inesistente", this.ioConsole.getUltimoMessaggio());
+	}
+	
+	@Test
+	public void testEseguiDirezioneCorretta() {
+		Comando comando = new ComandoVai();
+		comando.setParametro("nord");
+		comando.setIO(this.ioConsole);
+		comando.esegui(this.partita);
+		assertEquals("Biblioteca\nUscite:  SUD\n", this.ioConsole.getUltimoMessaggio());
+	}
+}

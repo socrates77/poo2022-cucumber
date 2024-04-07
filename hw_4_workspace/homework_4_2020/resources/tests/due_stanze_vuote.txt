@@ -1,0 +1,5 @@
+Stanze: INIZIALE, FINALE
+Inizio: INIZIALE
+Vincente: FINALE
+Attrezzi:
+Uscite: INIZIALE nord FINALE, FINALE sud INIZIALE

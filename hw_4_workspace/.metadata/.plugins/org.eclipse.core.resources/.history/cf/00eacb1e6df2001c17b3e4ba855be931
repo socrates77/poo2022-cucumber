@@ -1,0 +1,70 @@
+package it.uniroma3.diadia.comandi;
+
+import it.uniroma3.diadia.IO;
+
+public abstract class AbstractComando implements Comando {
+	/**
+	 * 
+	 */
+	protected IO ioConsole;
+	/**
+	 * 
+	 */
+	private String parametro = "";
+	/**
+	 * 
+	 */
+	protected String nome = null;
+	/**
+	 * @param IO ioConsole
+	 */
+	@Override
+	public void setIO(IO ioConsole) {
+		this.ioConsole = ioConsole;
+	}
+	
+	@Override
+	public String getNome() {
+		return this.nome;
+	}
+	/**
+	 * Di base il comportamento è quello di settare la variabile parametro sarà 
+	 * sovrascritto in caso di comportamente differente richiesto.
+	 */
+	@Override
+	public void setParametro(String parametro) {
+		this.parametro = parametro;
+	}
+	/**
+	 * Di base il comportamento della funzione è quello di ritornare 
+	 * il parametro impostato da {@code}setParametro
+	 */
+	@Override
+	public String getParametro() {
+		return this.parametro;
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		Comando that;
+		if (this.getClass() != o.getClass()) {
+			return false;
+		} else {
+			that = (Comando) o;
+		}
+		if (
+				java.util.Objects.equals(this.getNome(), that.getNome())
+				&& java.util.Objects.equals(this.getParametro(), that.getParametro())
+			) {
+			return true;
+		}
+		
+		return false;
+	}
+	
+	@Override
+	public int hashCode() {
+		return java.util.Objects.hashCode(this.getNome()) +
+				java.util.Objects.hashCode(this.getParametro()) + 41;
+	}
+}

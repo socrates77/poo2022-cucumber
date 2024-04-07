@@ -1,0 +1,31 @@
+package it.uniroma3.diadia;
+
+import static org.junit.Assert.*;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class FileReaderTester {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@Test (expected=FileNotFoundException.class)
+	public void testOpenFileReader() throws FileNotFoundException {
+		FileReader fr;
+		try {
+			fr = new FileReader("labirinto.txt");
+		} catch(FileNotFoundException e) {
+			throw e;
+		} finally {
+			if ( fr != null ) {
+				fr.close();
+			}
+		}
+	}
+
+}

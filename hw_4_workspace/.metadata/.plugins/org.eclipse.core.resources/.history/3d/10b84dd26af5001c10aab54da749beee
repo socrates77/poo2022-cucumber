@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.personaggi;
+
+import it.uniroma3.diadia.Partita;
+
+/**
+ * @author Alessandro Manias
+ *
+ */
+public class Strega extends AbstractPersonaggio {
+
+	public Strega(String nome, String presentazione) {
+		super(nome, presentazione);
+	}
+
+	@Override
+	public String agisci(Partita partita) {
+		return "";
+	}
+
+}

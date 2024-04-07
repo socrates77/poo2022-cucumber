@@ -1,0 +1,126 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.ambienti;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import it.uniroma3.diadia.attrezzi.Attrezzo;
+
+/**
+ * @author Alessandro Manias
+ *
+ */
+public class LabirintoBuilder {
+
+	Labirinto labirinto;
+	Stanza ultimaStanza;
+	Map<String, Stanza> stanze;
+
+	public LabirintoBuilder() {
+		this.labirinto = new Labirinto();
+		this.stanze = new HashMap<>();
+	}
+	/**
+	 * Aggiunge una nuova stanza e la imposta come iniziale.
+	 * @param nome
+	 * @return {@link LabirintoBuilder}
+	 */
+	public LabirintoBuilder addStanzaIniziale(String nome) {
+		Stanza stanza = new Stanza(nome);
+		this.labirinto.setStanzaCorrente(stanza);
+		this.stanze.put(nome, stanza);
+		this.ultimaStanza = stanza;
+		return this;
+	}
+	/**
+	 * Aggiunge una nuova stanza e la imposta come vincente.
+	 * @param nome
+	 * @return {@link LabirintoBuilder}
+	 */
+	public LabirintoBuilder addStanzaVincente(String nome) {
+		Stanza stanza = new Stanza(nome);
+		this.labirinto.setStanzaVincente(stanza);
+		this.stanze.put(nome, stanza);
+		this.ultimaStanza = stanza;
+		return this;
+	}
+	/**
+	 * Aggiunge una nuova stanza.
+	 * @param nome
+	 * @return {@link LabirintoBuilder}
+	 */
+	public LabirintoBuilder addStanza(String nome) {
+		Stanza stanza = new Stanza(nome);
+		this.stanze.put(nome, stanza);
+		this.ultimaStanza = stanza;
+		return this;
+	}
+	/**
+	 * Aggiunge una nuova stanza bloccata.
+	 * @param nome nome della stanza
+	 * @param direzione direzione bloccata
+	 * @param nomeAttrezzo nome dell'attrezzo necessario per sbloccare l'uscita
+	 * @return {@link LabirintoBuilder}
+	 */
+	public LabirintoBuilder addStanzaBloccata(String nome, String direzione, String nomeAttrezzo) {
+		Stanza stanza = new StanzaBloccata(nome, direzione, nomeAttrezzo);
+		this.stanze.put(nome, stanza);
+		this.ultimaStanza = stanza;
+		return this;
+	}
+	/**
+	 * Aggiunge una nuova stanza buia.
+	 * @param nome nome della stanza
+	 * @param nomeAttrezzo nome dell'attrezzo per illuminare la stanza
+	 * @return {@link LabirintoBuilder}
+	 */
+	public LabirintoBuilder addStanzaBuia(String nome, String nomeAttrezzo) {
+		Stanza stanza = new StanzaBuia(nome, nomeAttrezzo);
+		this.stanze.put(nome, stanza);
+		this.ultimaStanza = stanza;
+		return this;
+	}
+	/**
+	 * Aggiunge una nuova stanza magica.
+	 * @param nome nome della stanza
+	 * @param sogliaMagica quanti attrezzi devono essere posati per attivare la magia
+	 * @return {@link LabirintoBuilder}
+	 */
+	public LabirintoBuilder addStanzaMagica(String nome, int sogliaMagica) {
+		Stanza stanza = new StanzaMagica(nome, sogliaMagica);
+		this.stanze.put(nome, stanza);
+		this.ultimaStanza = stanza;
+		return this;
+	}
+	/**
+	 * Aggiunge una nuova stanza magica usa come soglia magica 2.
+	 * @param nome nome della stanza
+	 * @return {@link LabirintoBuilder}
+	 */
+	public LabirintoBuilder addStanzaMagica(String nome) {
+		Stanza stanza = new StanzaMagica(nome);
+		this.stanze.put(nome, stanza);
+		this.ultimaStanza = stanza;
+		return this;
+	}
+	public LabirintoBuilder addAdiacenza(String nome, String nomeAdiacente, String direzione) {
+		Stanza a = this.stanze.get(nome);
+		Stanza adiacente = this.stanze.get(nomeAdiacente);
+		Direzione d = Direzione.valueOf(direzione.toUpperCase());
+		a.impostaStanzaAdiacente(d, adiacente);
+		return this;
+	}
+
+	public LabirintoBuilder addAttrezzo(String nomeAttrezzo, int peso) {
+		Attrezzo attrezzo = new Attrezzo(nomeAttrezzo, peso);
+		Stanza stanza = this.ultimaStanza;
+		stanza.addAttrezzo(attrezzo);
+		return this;
+	}
+
+	public Labirinto getLabirinto() {
+		return this.labirinto;
+	}
+}

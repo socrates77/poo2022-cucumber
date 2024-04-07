@@ -1,0 +1,40 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.ambienti;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+/**
+ * @author alessandro
+ *
+ */
+public class DirezioneTest {
+
+	@Test
+	public void testEquals() {
+		assertEquals(Direzione.NORD, Direzione.NORD);
+	}
+
+	@Test
+	public void testHashCode() {
+		assertEquals(Direzione.NORD.hashCode(), Direzione.NORD.hashCode());
+	}
+	
+	@Test
+	public void testValues() {
+		Direzione[] dirs = { Direzione.NORD, Direzione.OVEST, Direzione.SUD, Direzione.EST };
+		assertArrayEquals(dirs, Direzione.values());
+	}
+	
+	@Test
+	public void testValueOf() {
+		System.out.println(Direzione.valueOf(Direzione, "NORD"));
+		assertEquals(0, Direzione.valueOf("NORD"));
+		assertEquals(1, Direzione.valueOf("OVEST"));
+		assertEquals(2, Direzione.valueOf("SUD"));
+		assertEquals(3, Direzione.valueOf("EST"));
+	}
+}

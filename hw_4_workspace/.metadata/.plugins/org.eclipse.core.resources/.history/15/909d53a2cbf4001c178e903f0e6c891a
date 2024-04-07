@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.comandi;
+
+/**
+ * @author alessandro
+ *
+ */
+public class ComandoInteragisci {
+
+}

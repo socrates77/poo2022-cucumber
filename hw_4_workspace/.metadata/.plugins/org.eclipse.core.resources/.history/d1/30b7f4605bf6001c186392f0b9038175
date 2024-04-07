@@ -1,0 +1,52 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+/**
+ * @author alessandro
+ *
+ */
+public class CaricatoreLabirintoTest {
+
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	/**
+	 * Test method for {@link it.uniroma3.diadia.CaricatoreLabirinto#carica()}.
+	 */
+	@Test
+	public void testCarica() {
+		CaricatoreLabirinto cl = new CaricatoreLabirinto('./resources/test/due_stanze_vuote.txt');
+		cl.carica();
+		assertEquals("INIZIALE", cl.getStanzaIniziale().getNome());
+		assertEquals("FINALE", cl.getStanzaFinale().getNome());
+
+	}
+
+	/**
+	 * Test method for {@link it.uniroma3.diadia.CaricatoreLabirinto#getStanzaIniziale()}.
+	 */
+	@Test
+	public void testGetStanzaIniziale() {
+		fail("Not yet implemented");
+	}
+
+	/**
+	 * Test method for {@link it.uniroma3.diadia.CaricatoreLabirinto#getStanzaVincente()}.
+	 */
+	@Test
+	public void testGetStanzaVincente() {
+		fail("Not yet implemented");
+	}
+
+}

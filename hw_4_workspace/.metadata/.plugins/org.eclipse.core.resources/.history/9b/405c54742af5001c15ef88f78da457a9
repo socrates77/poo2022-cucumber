@@ -1,0 +1,46 @@
+package it.uniroma3.diadia.personaggi;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import it.uniroma3.diadia.IOTester;
+import it.uniroma3.diadia.Partita;
+import it.uniroma3.diadia.ambienti.Labirinto;
+
+public class CaneTest {
+
+	Partita partita;
+	Labirinto labirinto;
+	IOTester ioConsole;
+	
+	@Before
+	public void setUp() {
+		this.labirinto = new Labirinto();
+		this.partita = new Partita(labirinto);
+		this.ioConsole = new IOTester();
+	}
+	
+	@Test
+	public void testAgisci() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testHaSalutato() {
+		AbstractPersonaggio personaggio = new Cane("Pluto");
+		assertFalse(personaggio.haSalutato());
+		personaggio.saluta();
+		assertTrue(personaggio.haSalutato());
+	}
+
+	@Test
+	public void testSaluta() {
+		AbstractPersonaggio personaggio = new Cane("Pluto");
+		assertFalse(personaggio.haSalutato());
+		assertEquals("Ciao, io sono Pluto. " + Cane.MESSAGGIO_PRESENTAZIONE, personaggio.saluta());
+		assertTrue(personaggio.haSalutato());
+	}
+
+}

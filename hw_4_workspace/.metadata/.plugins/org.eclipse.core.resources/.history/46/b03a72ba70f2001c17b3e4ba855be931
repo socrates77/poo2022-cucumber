@@ -1,0 +1,14 @@
+package it.uniroma3.comandi;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ComandoGuardaTest {
+
+	@Test
+	public void testGetNome() {
+		fail("Not yet implemented");
+	}
+
+}

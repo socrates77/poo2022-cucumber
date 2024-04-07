@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;it.uniroma3.comandi.AbstractComando.java&apos; to &apos;AbstractComandoTest.java&apos;&#x0A;- Original project: &apos;homework_4_2020&apos;&#x0A;- Original element: &apos;it.uniroma3.comandi.AbstractComando.java&apos;&#x0A;- Renamed element: &apos;it.uniroma3.comandi.AbstractComandoTest.java&apos;" description="Rename compilation unit &apos;AbstractComando.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/test&lt;it.uniroma3.comandi{AbstractComando.java" name="AbstractComandoTest.java" references="false" stamp="1654635651737" version="1.0"/>
+</session>

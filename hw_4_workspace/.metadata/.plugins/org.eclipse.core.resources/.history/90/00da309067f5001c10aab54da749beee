@@ -1,0 +1,40 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.personaggi;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+/**
+ * @author alessandro
+ *
+ */
+public class StregaTest {
+
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	/**
+	 * Test method for {@link it.uniroma3.diadia.personaggi.Strega#agisci(it.uniroma3.diadia.Partita)}.
+	 */
+	@Test
+	public void testAgisciPrimaDelSaluto() {
+		
+	}
+	
+	/**
+	 * Test method for {@link it.uniroma3.diadia.personaggi.Strega#agisci(it.uniroma3.diadia.Partita)}.
+	 */
+	@Test
+	public void testAgisciDopoIlSaluto() {
+		
+	}
+
+}

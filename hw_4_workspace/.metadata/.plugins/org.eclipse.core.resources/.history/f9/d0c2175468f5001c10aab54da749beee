@@ -1,0 +1,58 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.personaggi;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import it.uniroma3.diadia.IOTester;
+import it.uniroma3.diadia.Partita;
+import it.uniroma3.diadia.ambienti.Direzione;
+import it.uniroma3.diadia.ambienti.Labirinto;
+import it.uniroma3.diadia.ambienti.Stanza;
+
+import static it.uniroma3.diadia.ambienti.Direzione.*;
+/**
+ * @author alessandro
+ *
+ */
+public class StregaTest {
+
+	private Partita partita;
+	private Labirinto labirinto;
+	private IOTester ioConsole;
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@Before
+	public void setUp() throws Exception {
+		AbstractPersonaggio personaggio = new Strega("Strega", "Strega Bacheca");
+		Stanza stanzaMain = new Stanza("Main");
+		Stanza stanzaConUnAttrezzo = new Stanza("Stanza con un attrezzo");
+		stanzaConUnAttrezzo.addAttrezzo(new Attrezzo("Attrezzo 1", 1));
+		Stanza stanzaConDueAttrezzi = new Stanza("Stanza con due attrezzi");
+		stanzaConDueAttrezzi.addAttrezzo(new Attrezzo("Attrezzo 2", 1));
+		stanzaConDueAttrezzi.addAttrezzo(new Attrezzo("Attrezzo 2", 1));
+		stanzaMain.impostaStanzaAdiacente(Direzione., stanzaConDueAttrezzi)
+	}
+
+	/**
+	 * Test method for {@link it.uniroma3.diadia.personaggi.Strega#agisci(it.uniroma3.diadia.Partita)}.
+	 */
+	@Test
+	public void testAgisciPrimaDelSaluto() {
+		
+	}
+	
+	/**
+	 * Test method for {@link it.uniroma3.diadia.personaggi.Strega#agisci(it.uniroma3.diadia.Partita)}.
+	 */
+	@Test
+	public void testAgisciDopoIlSaluto() {
+		
+	}
+
+}

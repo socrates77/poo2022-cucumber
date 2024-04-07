@@ -1,0 +1,41 @@
+package it.uniroma3.diadia.comandi;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.junit.Before;
+
+import it.uniroma3.diadia.IO;
+import it.uniroma3.diadia.Partita;
+import it.uniroma3.diadia.ambienti.Labirinto;
+import it.uniroma3.diadia.personaggi.AbstractPersonaggio;
+
+public class ComandoSalutaTest {
+	class Personaggio extends AbstractPersonaggio {
+		public Personaggio() {
+			super("Personaggio", "Presentazione");
+		}
+	}
+	
+	private Partita partita;
+	private IO ioConsole;
+	private Labirinto labirinto;
+	
+	@Before
+	private void setUp() {
+		labirinto.setStanzaCorrente(new Sta);
+		this.partita = new Partita();
+		
+	}
+	
+	@Test
+	public void testEsegui() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetMessaggio() {
+		fail("Not yet implemented");
+	}
+
+}

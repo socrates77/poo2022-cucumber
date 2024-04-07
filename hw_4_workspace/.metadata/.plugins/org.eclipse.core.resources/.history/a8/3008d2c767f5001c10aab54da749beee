@@ -1,0 +1,47 @@
+/**
+ * 
+ */
+package it.uniroma3.diadia.personaggi;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import it.uniroma3.diadia.IOTester;
+import it.uniroma3.diadia.Partita;
+import it.uniroma3.diadia.ambienti.Labirinto;
+
+/**
+ * @author alessandro
+ *
+ */
+public class StregaTest {
+
+	private Partita partita;
+	private Labirinto labirinto;
+	private IOTester ioConsole;
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	/**
+	 * Test method for {@link it.uniroma3.diadia.personaggi.Strega#agisci(it.uniroma3.diadia.Partita)}.
+	 */
+	@Test
+	public void testAgisciPrimaDelSaluto() {
+		
+	}
+	
+	/**
+	 * Test method for {@link it.uniroma3.diadia.personaggi.Strega#agisci(it.uniroma3.diadia.Partita)}.
+	 */
+	@Test
+	public void testAgisciDopoIlSaluto() {
+		
+	}
+
+}
