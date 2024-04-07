@@ -8,7 +8,7 @@ Each folder contains the eclipse settings, mini-projects and solutions for the H
 
 - hw_1_workspace/
 - hw_2_workspace/
-- hw_3_cucumber-js/ (Non ricordo che cosa avevo fatto, ecco perché sarebbe sempre utile scrivere un documento o un minimo di CHANGELOG :D )
+- hw_3_cucumber-js/ ( I don't remember what I had done, that's why it would always be useful to write a document or a minimum of CHANGELOG :smiley: )
 - hw_3_workspace/
 - hw_4_workspace/
 
@@ -22,13 +22,7 @@ Ogni cartella contiene le impostazioni di eclipse i miniprogetti e le soluzioni 
 
 - hw_1_workspace/
 - hw_2_workspace/
-- hw_3_cucumber-js/ (Non ricordo che cosa avevo fatto, ecco perché sarebbe sempre utile scrivere un documento o un minimo di CHANGELOG :D )
+- hw_3_cucumber-js/ (Non ricordo che cosa avevo fatto, ecco perché sarebbe sempre utile scrivere un documento o un minimo di CHANGELOG :smiley: )
 - hw_3_workspace/
 - hw_4_workspace/
 
-
-
-
-
-- 
-- 
