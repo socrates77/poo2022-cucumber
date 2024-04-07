@@ -1,0 +1,31 @@
+package it.uniroma3.comandi;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import it.uniroma3.diadia.IOTester;
+import it.uniroma3.diadia.Partita;
+import it.uniroma3.diadia.comandi.ComandoFine;
+
+public class ComandoFineTest {
+
+	private Partita partita;
+	private IOTester ioConsole;
+
+	@Before
+	public void setUp() throws Exception {
+		this.partita = new Partita();
+		this.ioConsole = new IOTester();
+	}
+
+	@Test
+	public void testEsegui() {
+		ComandoFine cf = new ComandoFine();
+		cf.setIO(this.ioConsole);
+		cf.esegui(this.partita);
+		assertEquals("Grazie di aver giocato!", this.ioConsole.getUltimoMessaggio());
+	}
+
+}
